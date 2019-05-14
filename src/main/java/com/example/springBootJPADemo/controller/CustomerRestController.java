@@ -32,4 +32,17 @@ public class CustomerRestController {
         return service.create(c);
     }
 
+    @RequestMapping(value = "{id}", method = RequestMethod.PUT)
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    private Customer putCustomer(@PathVariable int id, @RequestBody Customer c) {
+        c.setId(id);
+        return service.update(c);
+    }
+
+    @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    private void deleteCustomer(@PathVariable int id) {
+        service.delete(id);
+    }
+
 }
