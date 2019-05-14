@@ -8,9 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -40,19 +38,14 @@ public class CustomerContorller {
         }
         Customer c = new Customer();
         BeanUtils.copyProperties(form, c);
-        c.setAge(18);
+        // c.setAge(18);
         service.create(c);
         return "redirect:/customers";
     }
 
     @RequestMapping(value = "delete", method = RequestMethod.POST)
-    private String delete(@Valid CustomerForm form, BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            return listAll(model);
-        }
-        Customer c = new Customer();
-        BeanUtils.copyProperties(form, c);
-        service.delete(c.getId());
+    private String delete(@RequestParam Integer id) {
+        service.delete(id);
         return "redirect:/customers";
     }
 

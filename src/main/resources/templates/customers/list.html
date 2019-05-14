@@ -15,15 +15,21 @@
         <dl>
             <dt><label for="lastName">Last Name</label></dt>
             <dd>
-                <input type="text" id="lastName" name="lastame" th:field="*{lastName}" th:errorclass="error-input"
+                <input type="text" id="lastName" name="lastName" th:field="*{lastName}" th:errorclass="error-input"
                        value="default last name"/>
-                <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="error-messages">ERROR!</span>
+                <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"
+                      class="error-messages">ERROR!</span>
             </dd>
             <dt><label for="firstName">First Name</label></dt>
             <dd>
                 <input type="text" id="firstName" name="firstName" th:field="*{firstName}" th:errorclass="error-input"
                        value="default first name"/>
-                <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="error-messages">ERROR!</span>
+                <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"
+                      class="error-messages">ERROR!</span>
+            </dd>
+            <dt><label for="age">Age</label></dt>
+            <dd>
+                <input type="number" id="age" name="age" th:field="*{age}" value="18"/>
             </dd>
         </dl>
 

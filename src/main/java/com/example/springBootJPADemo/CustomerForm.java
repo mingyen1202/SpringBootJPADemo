@@ -15,4 +15,7 @@ public class CustomerForm {
     @NotNull
     @Size(min = 1, max = 64)
     private String lastName;
+
+    @NotNull
+    private String age;
 }
