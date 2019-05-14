@@ -21,4 +21,7 @@ public class Customer {
 
     @Column(nullable = false)
     private String lastName;
+
+    @Column(nullable = false)
+    private int age;
 }

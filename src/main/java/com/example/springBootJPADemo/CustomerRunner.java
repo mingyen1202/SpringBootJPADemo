@@ -26,13 +26,14 @@ public class CustomerRunner implements CommandLineRunner {
     }
 
     private void initSampleData() {
-        Customer c = repo.save(new Customer(null, "Mark", "Ho"));
+        Customer c = repo.save(new Customer(null, "Mark", "Ho", 55));
         LOGGER.info("create 1 customer {}", c.toString());
-        repo.save(new Customer(null, "Peter", "Huang"));
-        repo.save(new Customer(null, "John", "Lin"));
-        repo.save(new Customer(null, "Paul", "Wu"));
-        repo.save(new Customer(null, "Taddy", "Hi"));
-        repo.save(new Customer(null, "Sam", "Liu"));
-        repo.save(new Customer(null, "Sandy", "Chen"));
+        repo.save(new Customer(null, "Peter", "Huang", 40));
+        repo.save(new Customer(null, "John", "Lin", 20));
+        repo.save(new Customer(null, "Paul", "Wu", 22));
+        repo.save(new Customer(null, "Taddy", "Hi", 70));
+        repo.save(new Customer(null, "Sam", "Liu", 15));
+        repo.save(new Customer(null, "Sandy", "Chen", 35));
+        repo.save(new Customer(null, "Mark", "Chen", 5));
     }
 }
