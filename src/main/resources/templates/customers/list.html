@@ -11,11 +11,24 @@
 <body>
 <H1>List all customers</H1>
 <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric">ID</th>
+        <th class="mdl-data-table__cell--non-numeric">Last Name</th>
+        <th class="mdl-data-table__cell--non-numeric">First Name</th>
+        <th class="mdl-data-table__cell--non-numeric">Age</th>
+        <th class="mdl-data-table__cell--non-numeric">Delete</th>
+    </tr>
     <tr th:each="customer:${customers}">
         <td th:text="${customer.id}" class="mdl-data-table__cell--non-numeric">default ID</td>
         <td th:text="${customer.lastName}" class="mdl-data-table__cell--non-numeric">Last Name</td>
         <td th:text="${customer.firstName}" class="mdl-data-table__cell--non-numeric">First Name</td>
         <td th:text="${customer.age}" class="mdl-data-table__cell--non-numeric">Age</td>
+        <td>
+            <form th:action="@{/customers/delete}" method="post">
+                <input class="mdl-button mdl-js-button mdl-button--raised" type="submit" value="delete" />
+                <input class="mdl-button mdl-js-button mdl-button--raised" type="hidden" name="id" th:value="${customer.id}" />
+            </form>
+        </td>
     </tr>
 </table>
 </body>
