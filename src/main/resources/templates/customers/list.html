@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <title>Demo JPA Usage</title>
+</head>
+<body>
+<H1>List all customers</H1>
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <tr th:each="customer:${customers}">
+        <td th:text="${customer.id}" class="mdl-data-table__cell--non-numeric">default ID</td>
+        <td th:text="${customer.lastName}" class="mdl-data-table__cell--non-numeric">Last Name</td>
+        <td th:text="${customer.firstName}" class="mdl-data-table__cell--non-numeric">First Name</td>
+        <td th:text="${customer.age}" class="mdl-data-table__cell--non-numeric">Age</td>
+    </tr>
+</table>
+</body>
+</html>

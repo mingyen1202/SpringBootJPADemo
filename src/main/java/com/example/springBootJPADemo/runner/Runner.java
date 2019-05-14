@@ -1,4 +1,4 @@
-package com.example.springBootJPADemo;
+package com.example.springBootJPADemo.runner;
 
 import com.example.springBootJPADemo.model.Beverage;
 import com.example.springBootJPADemo.repository.MyCRUDRepository;
@@ -6,7 +6,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component

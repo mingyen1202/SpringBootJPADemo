@@ -1,6 +1,6 @@
 package com.example.springBootJPADemo.controller;
 
-import com.example.springBootJPADemo.CustomerService;
+import com.example.springBootJPADemo.service.CustomerService;
 import com.example.springBootJPADemo.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

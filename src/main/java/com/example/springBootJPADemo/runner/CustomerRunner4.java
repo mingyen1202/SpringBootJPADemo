@@ -1,4 +1,4 @@
-package com.example.springBootJPADemo;
+package com.example.springBootJPADemo.runner;
 
 import com.example.springBootJPADemo.repository.CustomerRepository;
 import org.slf4j.Logger;

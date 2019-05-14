@@ -1,6 +1,5 @@
-package com.example.springBootJPADemo;
+package com.example.springBootJPADemo.runner;
 
-import com.example.springBootJPADemo.model.Customer;
 import com.example.springBootJPADemo.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,8 +9,6 @@ import org.springframework.core.annotation.Order;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Component
 @Order(value = 3)

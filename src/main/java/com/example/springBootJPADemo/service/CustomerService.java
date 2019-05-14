@@ -1,4 +1,4 @@
-package com.example.springBootJPADemo;
+package com.example.springBootJPADemo.service;
 
 import com.example.springBootJPADemo.model.Customer;
 import com.example.springBootJPADemo.repository.CustomerSimpleRepository;
