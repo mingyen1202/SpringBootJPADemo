@@ -16,4 +16,7 @@ public interface CustomerRepository extends CrudRepository<Customer, Integer> {
     List<Customer> findAllOrderByFirstName();
 
     Page<Customer> findAll(Pageable pageable);
+
+    @Query("SELECT c FROM Customer c ORDER BY c.lastName, c.firstName")
+    List<Customer> findAllOrderByName(Pageable pageable);
 }
