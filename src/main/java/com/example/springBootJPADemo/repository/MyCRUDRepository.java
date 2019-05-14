@@ -1,4 +1,4 @@
-package com.example.springBootJPADemo;
+package com.example.springBootJPADemo.repository;
 
 import com.example.springBootJPADemo.model.Beverage;
 import org.springframework.data.repository.CrudRepository;

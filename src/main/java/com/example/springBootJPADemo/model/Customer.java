@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class Customer {
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
 
     @Column(nullable = false)
     private String firstName;
